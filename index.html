@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="style.css">
+    <div id="container">
+        <!-- <img src="/img/image.png" alt=""> -->
+        <div id="navbar">
+            <div id="logo">
+                <img src="/img/logo.png" alt="Rog Music">
+            </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SPECIFICATION</a></li>
+                    <li><a href="">PRODUCTS</a></li>
+                    <li><a href="">CONNECT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="heading">
+
+                <p>THE</p>
+                <p>REAL</p>
+                <p>SOUND</p>
+
+            </div>
+
+            <div id="formusic">
+                <p>Click Here To Play</p>
+                <img id="icon" src="/img/play.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <audio id="music">
+        <source src="/img/jack sparrow.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script>
+        var mysong = document.getElementById("music")
+        var icon = document.getElementById("icon")
+
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play()
+                icon.src="/img/pause.png"
+            }
+            else{
+                mysong.pause()
+                icon.src="/img/play.png"
+            }
+        }
+    </script>
+</body>
+
+</html>
